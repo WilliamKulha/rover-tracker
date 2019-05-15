@@ -1,0 +1,1 @@
+export const INITIAL_URL = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2019-5-13&api_key=DPod7GOX1pA3PUdgDmVKA92Xvd8nHHPOSacS2hYQ'
