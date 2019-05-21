@@ -5,6 +5,7 @@ import {INITIAL_URL} from './config/constants'
 import './App.css';
 import { RandomPicture } from './features/randomPicture/index'
 import { LoadingSpinner } from './features/loadingSpinner/index'
+import RecentPictures from './features/recentPictures/index'
 import { Banner } from './features/banner/index'
 
 class App extends Component {
@@ -20,7 +21,8 @@ class App extends Component {
     return (  
       <div className="App">
         <Banner />
-        <RandomPicture image={this.props.masterList.featuredPhoto} />
+        <RandomPicture image={this.props.props.featuredPhoto} />
+        <RecentPictures />
       </div>
     )
 
@@ -30,7 +32,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    masterList : state
+    props : state
   }
 }
 

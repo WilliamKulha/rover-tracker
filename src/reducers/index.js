@@ -4,7 +4,13 @@ const initialState = {
   masterList : {},
   featuredPhoto : {},
   userList : [],
-  currentPhoto : {}
+  currentPhoto : {},
+  currentDate : '',
+  currentCamera : '',
+  currentRover : '',
+  searchHasError : false,
+  searchIsLoading : false,
+  searchResults : []
 }
 
 const asyncReducer = (state = initialState, action) => {
@@ -26,7 +32,25 @@ const asyncReducer = (state = initialState, action) => {
         masterHasErrored : false,
         masterIsLoading : false,
         masterList : action.payload.photos, //Hey it looks like it's pretty important to use payload.
-        featuredPhoto : action.payload.photos[Math.floor(Math.random() * action.payload.photos.length)]
+        featuredPhoto : action.payload.photos[0]
+      })
+    case "SEARCH_HAS_ERROR" :
+      return Object.assign({}, state, {
+        searchHasError : true,
+        searchIsLoading : false,
+        searchResults : [],
+      })
+    case "SEARCH_IS_LOADING" : 
+      return Object.assign({}, state, {
+        searchHasError : false,
+        searchIsLoading : true,
+        searchResults: [],
+      })
+    case "SEARCH_FETCH_SUCCESS" :
+      return Object.assign({}, state, {
+        searchHasError : false,
+        searchIsLoading : false,
+        searchResults : action.payload.photos
       })
     default :
       return state 

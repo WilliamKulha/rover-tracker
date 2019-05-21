@@ -1,0 +1,51 @@
+.hamburger-wrapper {
+  z-index: 99999;
+  display : inline-block;
+  margin: 1em;
+  position : relative;
+  padding : 1vw;
+}
+
+.circle {
+
+  border-radius: 500px;
+  cursor : pointer;
+  width : 100px;
+  height : 100px;
+  position : relative;
+  background : #0d6fba;
+}
+
+.line {
+  position : absolute;
+  height : 5px;
+  left: 25%;
+  width : 50%;
+  background-color : white;
+  border-radius : 10px;
+  transition : all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.25s;
+}
+
+.top {
+  top : 35%;
+}
+
+.middle {
+  top : 50%;
+}
+
+.bottom {
+  top : 65%;
+}
+
+.circle.open {
+  .top {
+    transform : rotate(45deg);
+    top : 48%;
+  }
+  .middle, .bottom {
+    transform : rotate(-45deg);
+    top: 48%;
+  }
+
+}

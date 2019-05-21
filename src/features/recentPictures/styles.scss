@@ -1,0 +1,9 @@
+@import '../../config/scss/scss-variables';
+
+.recent-pictures-wrapper {
+  border: 1px solid $roverRed;
+  margin : 2em;
+  display : flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}

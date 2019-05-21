@@ -1,0 +1,11 @@
+@import '../../config/scss/scss-variables';
+
+nav {
+    display : none; 
+}
+
+.ham-wrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+}

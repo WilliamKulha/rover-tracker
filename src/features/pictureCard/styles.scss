@@ -1,0 +1,23 @@
+@import '../../config/scss/scss-variables';
+
+.card-wrapper {
+  margin: 1em auto;
+  position: relative;
+  z-index: 1;
+
+  .image img {
+    margin : auto;
+    max-width : 100%;
+  }
+
+  .description {
+    max-height : 50%;
+    width: 100%;
+    background-color: rgba( $roverRed, .6);
+    position: absolute;
+    bottom: 0;
+    h3 {
+      text-align : center;
+    }
+  }
+}

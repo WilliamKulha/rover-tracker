@@ -1,7 +1,12 @@
 import React from 'react'
+import './styles.scss'
+import HamburgerMenu  from './menuHamburger/index'
 
 export const Banner = () => (
-  <div className="banner-wrapper">
-    <h1>Rover Tracker</h1>
-  </div>
+  <header>
+    <h1 className="logo">Rover Tracker</h1>
+    <div className="ham-wrapper">
+      <HamburgerMenu />
+    </div>
+  </header>
 )
